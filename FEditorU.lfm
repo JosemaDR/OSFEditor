@@ -1,0 +1,87 @@
+object FEditor: TFEditor
+  Left = 452
+  Height = 768
+  Top = 124
+  Width = 1024
+  Caption = 'FEditor: Archivo nuevo'
+  ClientHeight = 743
+  ClientWidth = 1024
+  DesignTimePPI = 120
+  Menu = menuPrincipal
+  OnPaint = FormPaint
+  Position = poScreenCenter
+  LCLVersion = '2.0.0.4'
+  WindowState = wsMaximized
+  object campoEdicion: TMemo
+    Left = 0
+    Height = 113
+    Top = 10
+    Width = 188
+    OnChange = campoEdicionChange
+    TabOrder = 0
+  end
+  object menuPrincipal: TMainMenu
+    left = 984
+    top = 144
+    object mArchivo: TMenuItem
+      Caption = '&Archivo'
+      object mNuevo: TMenuItem
+        Caption = '&Nuevo'
+        ShortCut = 16462
+        OnClick = mNuevoClick
+      end
+      object mAbrir: TMenuItem
+        Caption = 'Abrir...'
+        ShortCut = 16449
+        OnClick = mAbrirClick
+      end
+      object mGuardar: TMenuItem
+        Caption = '&Guardar'
+        ShortCut = 16467
+        OnClick = mGuardarClick
+      end
+      object mGuardarComo: TMenuItem
+        Caption = 'G&uardar como...'
+        ShortCut = 49235
+        OnClick = mGuardarComoClick
+      end
+      object mSeparador: TMenuItem
+        Caption = '-'
+      end
+      object mSalirArchivo: TMenuItem
+        Caption = 'Salir'
+        ShortCut = 16499
+        OnClick = mSalirArchivoClick
+      end
+    end
+    object mEdicion: TMenuItem
+      Caption = '&Edición'
+      object mCortar: TMenuItem
+        Caption = 'Cortar'
+        ShortCut = 16472
+        OnClick = mCortarClick
+      end
+      object mCopiar: TMenuItem
+        Caption = 'Copiar'
+        ShortCut = 16451
+        OnClick = mCopiarClick
+      end
+      object mPegar: TMenuItem
+        Caption = 'Pegar'
+        ShortCut = 16470
+        OnClick = mPegarClick
+      end
+    end
+    object mSalir: TMenuItem
+      Caption = '&Salir'
+      OnClick = mSalirClick
+    end
+  end
+  object ventanaGuardar: TSaveDialog
+    left = 984
+  end
+  object ventanaAbrir: TOpenDialog
+    left = 984
+    top = 64
+  end
+end
